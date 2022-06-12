@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Currency {
@@ -8,6 +10,11 @@ public class Currency {
         scanner.close();
 
         // Write your code here.
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat india = NumberFormat.getCurrencyInstance(new Locale("en","IN"));
+        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+
 
         System.out.println("US: " + us);
         System.out.println("India: " + india);
